@@ -1,0 +1,64 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{meupacote}[2014/08/24 Example LaTeX package]
+% ---
+% Pacotes fundamentais 
+% ---
+\RequirePackage{lmodern}		        	% Usa a fonte Latin Modern
+\RequirePackage[T1]{fontenc}      		% Selecao de codigos de fonte.
+\RequirePackage[utf8]{inputenc}   		% Codificacao do documento (conversão automática dos acentos)
+\RequirePackage{indentfirst}	      	% Indenta o primeiro parágrafo de cada seção.
+\RequirePackage{color}				        % Controle das cores
+\RequirePackage{graphicx}			        % Inclusão de gráficos
+\RequirePackage{microtype} 			      % para melhorias de justificação
+\RequirePackage{listings}
+\RequirePackage{amsmath}
+\RequirePackage{fancyhdr}
+\RequirePackage{import}
+
+% \setlength{\cftsubsubsecindent}{0pt}% Remove indent for \subsubsection
+
+% ---
+% Pacotes adicionais, usados apenas no âmbito do Modelo Canônico do abnteX2
+% ---
+\RequirePackage{lipsum}				% para geração de dummy text
+% ---
+% Pacotes de citações
+% ---
+\RequirePackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
+\RequirePackage[alf]{abntex2cite}                  % Citações padrão ABNT
+
+% --- 
+% CONFIGURAÇÕES DE PACOTES
+
+% Configurações do pacote backref
+% Usado sem a opção hyperpageref de backref
+\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
+% Texto padrão antes do número das páginas
+\renewcommand{\backref}{}
+% Define os textos da citação
+\renewcommand*{\backrefalt}[4]{
+	\ifcase #1 %
+		Nenhuma citação no texto.%
+	\or
+		Citado na página #2.%
+	\else
+		Citado #1 vezes nas páginas #2.%
+	\fi}%
+% ---
+
+
+% ---
+% Configurações do pacote backref
+% Usado sem a opção hyperpageref de backref
+\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
+% Texto padrão antes do número das páginas
+\renewcommand{\backref}{}
+% Define os textos da citação
+\renewcommand*{\backrefalt}[4]{
+	\ifcase #1 %
+		Nenhuma citação no texto.%
+	\or
+		Citado na página #2.%
+	\else
+		Citado #1 vezes nas páginas #2.%
+	\fi}%

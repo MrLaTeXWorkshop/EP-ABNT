@@ -1,0 +1,131 @@
+\documentclass[
+  % -- opções da classe memoir --
+  12pt,				         % tamanho da fonte
+  oneside,			       % para impressão apenas no recto. Oposto a twoside
+  a4paper,			       % tamanho do papel. 
+  % -- opções da classe abntex2 --
+  %chapter=TITLE,		   % títulos de capítulos convertidos em letras maiúsculas
+  %section=TITLE,		   % títulos de seções convertidos em letras maiúsculas
+  %subsection=TITLE,	 % títulos de subseções convertidos em letras maiúsculas
+  %subsubsection=TITLE % títulos de subsubseções convertidos em letras maiúsculas
+  % -- opções do pacote babel --
+  english,		       	 % idioma adicional para hifenização
+  brazil,			      	 % o último idioma é o principal do documento
+]{abntex2}
+\usepackage{meupacote}
+
+% ---
+% 
+% ---
+\graphicspath{{../images/}}
+% O tamanho do parágrafo é dado por:
+\setlength{\parindent}{1.3cm}
+% ---
+% 
+% ---
+% Controle do espaçamento entre um parágrafo e outro:
+\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+% ---
+% 
+% ---
+% Espaçamento simples
+\SingleSpacing
+% ---
+% Informações de dados para CAPA
+% ---
+\titulo{Uma Introdução a Haskell}
+\autor{Gustavo Lopes Rodrigues \and Lucas Santiago \and Pedro Souza \and Thiago Henriques}
+\local{Belo Horizonte}
+\data{2020}
+\instituicao{%
+  Pontifícia Universidade Católica Minas Gerais
+  }
+\tipotrabalho{Trabalho de LIP}
+% ---
+% 
+% ---
+% informações do PDF
+\makeatletter
+\hypersetup{
+     	%pagebackref=true,
+		pdftitle={\@title}, 
+		pdfauthor={\@author},
+    	pdfsubject={Trabalho de Linguagem de programação em LaTeX},
+	    pdfcreator={GLR, LSO, PS, THN},
+		pdfkeywords={abnt}{latex}{abntex}{abntex2}{Linguagem de programação}, 
+		colorlinks=true,       		% false: boxed links; true: colored links
+    	linkcolor=black,          	% color of internal links
+    	citecolor=blue,        		% color of links to bibliography
+    	filecolor=magenta,      		% color of file links
+		urlcolor=blue,
+		bookmarksdepth=4
+}
+\makeatother
+
+\makeindex
+
+% ---
+% Iniciando efetivamente o documento
+% ---
+\begin{document} 
+
+    % Fazer com que as secções sejão subcapitulos
+    \renewcommand{\thesection}{\noindent\arabic{chapter}.\arabic{section}}. 
+    % ---
+    % Selecionando linguagem
+    % ---
+    \selectlanguage{brazil}
+    % ---
+    % Retira espaço extra obsoleto entre as frases.
+    % ---
+    \frenchspacing
+    % ---
+    % Imprimir a capa 
+    % ---
+    \imprimircapa
+    % ---
+    % Imprimir a tabela de conteúdos(Sumário)
+    % ---
+    \pdfbookmark[0]{\contentsname}{toc}
+    \tableofcontents*
+    \cleardoublepage
+    % ---
+    % PARTE TEXTUAL
+    % ---
+    \textual
+    % ---
+    % Criar nova página e então iniciar a escrita
+    % ---
+    \newpage
+    
+    \import{./sections}{chapter1.tex}
+
+    \newpage
+
+    \import{./sections}{chapter2.tex}
+
+    \newpage
+
+    \import{./sections}{chapter3.tex}
+
+    \newpage
+
+    \import{./sections}{chapter4.tex}
+
+    \newpage
+
+    \import{./sections}{chapter5.tex}
+
+    \newpage
+
+    \import{./sections}{conclusao.tex}
+
+    \newpage
+
+    \postextual
+
+    \bibliography{referencias}
+    \import{./sections}{appendice.tex}
+    
+
+\end{document}
