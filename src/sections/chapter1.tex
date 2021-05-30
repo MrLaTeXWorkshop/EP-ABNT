@@ -69,6 +69,39 @@
       \item Xmonad, totalmente escrito em Haskell, é um gerenciador de janela para o sistema X Window System.
     \end{itemize}
 
+    \begin{figure}[ht]
+        \centering
+        \begin{tikzpicture}
+            \begin{axis}[xbar interval, xmax=95,xmin=25, minor x tick num = 5]
+              \addplot+[ 
+              boxplot prepared={
+                median=59.61,
+                upper quartile=69.18,
+                lower quartile=50.87,
+                upper whisker=85.18,
+                lower whisker=35.46
+              },
+              ] coordinates {};
+            \end{axis}
+        \end{tikzpicture}
+        \caption{Box Plot}
+    \end{figure}
+
+    \begin{figure}[ht]
+        \centering
+        \begin{tikzpicture}
+            \begin{axis}[
+                ymin=0, ymax=20,
+                minor y tick num = 3,
+                area style,
+                xtick = {0.2, 0.6,..., 2.6}
+                ]
+                \addplot+[ybar interval, mark=no] plot coordinates { (0.2, 8) (0.6, 13) (1.0, 16) (1.4, 12) (1.8, 6) (2.2, 5) (2.6, 5)};
+            \end{axis}
+        \end{tikzpicture}
+        \caption{Histograma}    
+    \end{figure}
+
     \nocite{haskellmicrosoft}
     \nocite{haskellreport2010}
     \nocite{haskelljobs}

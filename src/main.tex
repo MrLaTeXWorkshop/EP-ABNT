@@ -3,6 +3,7 @@
   12pt,				         % tamanho da fonte
   oneside,			       % para impressão apenas no recto. Oposto a twoside
   a4paper,			       % tamanho do papel. 
+  article,
   % -- opções da classe abntex2 --
   %chapter=TITLE,		   % títulos de capítulos convertidos em letras maiúsculas
   %section=TITLE,		   % títulos de seções convertidos em letras maiúsculas
@@ -14,11 +15,24 @@
 ]{abntex2}
 \usepackage{meupacote}
 
+\pgfplotsset{compat=1.8}
+\usepgfplotslibrary{statistics}
+
+
 % ---
 % 
 % ---
 \graphicspath{{../images/}}
 % O tamanho do parágrafo é dado por:
+
+% ---
+% Altera as margens padrões
+% ---
+\setlrmarginsandblock{3cm}{3cm}{*}
+\setulmarginsandblock{3cm}{3cm}{*}
+\checkandfixthelayout
+% ---
+
 \setlength{\parindent}{1.3cm}
 % ---
 % 
@@ -33,14 +47,14 @@
 % ---
 % Informações de dados para CAPA
 % ---
-\titulo{Uma Introdução a Haskell}
-\autor{Gustavo Lopes Rodrigues \and Lucas Santiago \and Pedro Souza \and Thiago Henriques}
+\titulo{Um estudo estatístico sobre ataques cardíacos e seu prognóstico}
+\autor{Gustavo Lopes \and Homenique Vieira \and Lucas Santiago \and Rafael Amauri \and  Thiago Henriques}
 \local{Belo Horizonte}
-\data{2020}
+\data{2021}
 \instituicao{%
   Pontifícia Universidade Católica Minas Gerais
   }
-\tipotrabalho{Trabalho de LIP}
+\tipotrabalho{Trabalho de Estatística}
 % ---
 % 
 % ---
@@ -50,9 +64,9 @@
      	%pagebackref=true,
 		pdftitle={\@title}, 
 		pdfauthor={\@author},
-    	pdfsubject={Trabalho de Linguagem de programação em LaTeX},
-	    pdfcreator={GLR, LSO, PS, THN},
-		pdfkeywords={abnt}{latex}{abntex}{abntex2}{Linguagem de programação}, 
+    	pdfsubject={Um estudo estatístico sobre ataques cardíacos e formas de prognosticar},
+	    pdfcreator={GL, HV, LS, RF, TH},
+		pdfkeywords={abnt}{latex}{abntex}{abntex2}{Estatística e Probabilidade}{Ataques cardíacos}, 
 		colorlinks=true,       		% false: boxed links; true: colored links
     	linkcolor=black,          	% color of internal links
     	citecolor=blue,        		% color of links to bibliography
@@ -83,7 +97,26 @@
     % Imprimir a capa 
     % ---
     \imprimircapa
+    %
+    % --- 
+    \begin{abstract}
+      Este é o manual de uso da classe \textsf{abntex2}. Trata-se de um conjunto de
+      customizações da classe \textsf{memoir} para elaboração de documentos técnicos e
+      científicos condizentes com as normas da Associação Brasileira de Normas
+      Técnicas, especialmente a ABNT NBR 6022:2018, ABNT NBR 10719:2015, ABNT NBR
+      14724:2011 e a ABNT NBR 6024:2012, além de outras referentes a ``Informação e
+      documentação''
+            
+      \vspace{\onelineskip}
+      
+      \noindent
+
+      \textbf{Palavras-chave:} Ataques cardiácos.
+      \end{abstract}
     % ---
+    %
+    %
+    \newpage 
     % Imprimir a tabela de conteúdos(Sumário)
     % ---
     \pdfbookmark[0]{\contentsname}{toc}
