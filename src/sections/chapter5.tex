@@ -1,41 +1,32 @@
-\chapter{Exemplo(s) de programa(s)}
+\chapter{Intervalo de confiança para proporção de interesse}
 
-    \setcounter{section}{0}
+    De uma base amostral contendo 303 pessoas, foram selecionadas todas com idade
+    igual ou superior a 53 anos, totalizando 183 pessoas. Desta forma, foi realizado 
+    o intervalo de confiança por proporção.
+    \begin{equation} \label{eq1}
+    \begin{split}
+    & IC(1-\alpha)\%= \bar{x} \pm \tau_\frac{\alpha}{2} ; * n-1 \frac{S}{\sqrt{n}} \\
+    & IC(95)\% = 54.37 \pm 2.2622 * \frac{6.36}{\sqrt{10}} \\
+    & IC(95)\% = 54.37 \pm 4.55 \\
+    & IC(95)\% = [446.4 ; 455.50] 
+    \end{split}
+    \end{equation}
 
-    \section{Hello World em Haskell}
-
-    \section{Quicksort}
-    \subsection{Exemplo de Quicksort em C}
-
-    \subsection{Exemplo de Quicksort em Haskell usando compreensão de lista} 
-
-
-    \newpage
-
-    \subsection{Exemplo de Quicksort em Haskell usando a função filter}
-
-
-    \section{Explicação dos algoritmos}
-    Os algoritmos em Haskell são extremamente compactos em relação à C. Sua sintaxe não tem foco
-    em programar diretamente a memória, como acontece em C. Começando pelo \emph{Hello World} simples ou evoluindo
-    para um quicksort, a lingua mostra-se bem compacta e direta na resolução do problema.
-
-    No primeiro exemplo, foi usado \emph{list comprehension} para resolver o problema. Na primeira linha,
-    foi declarado uma lista vazia para ser retornada caso o quicksort receba uma lista sem valores. A segunda linha
-    cria uma função recursiva, caso tenha valores na lista para serem ordenados.
-
-    \subsection{Exemplo de Quicksort em Haskell usando a função filter}
+    \begin{equation} \label{eq2}
+    \begin{split}
+    & IC(1-\alpha)\%= \bar{x} \pm Z*\frac{\alpha}{2} * \frac{\sigma}{\sqrt{N}} \\
+    & IC(95)\% = 54.37 \pm 1.960 * \frac{9.08}{\sqrt{303}} \\
+    & IC(95)\% = 54.37 \pm 1.02 \\
+    & IC(95)\% = [53.35 ; 55.39] 
+    \end{split}
+    \end{equation}
 
 
-    Esse é um modelo traduzido diretamente do exemplo do quicksort em C para Haskell. Modelo resumido usando recursos da linguagem
-    abaixo:
-
-    \subsection{Exemplo de Quicksort em Haskell usando a função filter} 
-
-    Mesmo resumindo o código, a forma imperativa para o quicksort não parece ser uma boa opção, usar o quicksort de forma recursiva
-    dentro do Haskell torna o código muito mais simples e intuitivo.
-
-    \nocite{beginnersbook}
-    \nocite{qastack}
-    \nocite{haskellreport98}
-    \nocite{progfuncional}
+    \begin{equation} \label{eq3}
+    \begin{split}
+    & IC(1-\alpha)\%= \hat{P} \pm Z_\frac{\alpha}{2} * \sqrt{\frac{\hat{P}*(1-\hat{P})}{n}} \\
+    & IC(95)\% = 0.604 \pm 1.96 * \sqrt{\frac{0.604*(0.396)}{303}} \\
+    & IC(95)\% = 0.604 \pm 0.055 \\
+    & IC(95)\% = [0.549 ; 0.659] 
+    \end{split}
+    \end{equation}
