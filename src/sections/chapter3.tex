@@ -85,6 +85,43 @@
       \legend{Fonte: Produzido pelos próprios autores}
     \end{figure}
 
+    \begin{figure}[H]
+      \centering
+      \caption{Histograma do pressão sanguínea repouso }  
+      \begin{tikzpicture}
+          \begin{axis}[
+              xlabel={Pressão sanguínea repouso},
+              ylabel={n° de casos},
+              ymin=0, ymax=84,
+              xmin=84, xmax=210,
+              minor y tick num = 5,
+              area style,
+              ]
+              \addplot+[ybar interval, mark=no] plot coordinates { (94, 10) (104, 42) (115, 67) (126, 74) (136, 57) (147, 27) (157, 13) (168, 8) (178, 3) (189, 2) (200, 2)};
+          \end{axis}
+      \end{tikzpicture}
+      \legend{Fonte: Produzido pelos próprios autores}
+    \end{figure}
+
+    \begin{figure}[H]
+      \centering
+      \caption{Histograma do pico de batimento cardiáco }  
+      \begin{tikzpicture}
+          \begin{axis}[
+              xlabel={Pico de batimento cardiáco},
+              ylabel={n° de casos},
+              ymin=0, ymax=88,
+              xmin=61, xmax=212,
+              minor y tick num = 5,
+              area style,
+              ]
+              \addplot+[ybar interval, mark=no] plot coordinates { (71, 1) (84, 6) (97, 11) (110, 26) (123, 35) (136, 50) (149, 77) (163, 63) (175, 26) (190, 5) (202, 5)};
+          \end{axis}
+      \end{tikzpicture}
+      \legend{Fonte: Produzido pelos próprios autores}
+    \end{figure}
+
+
 
     \nocite{sobreboxplot}
     \nocite{sobrehistograma}
