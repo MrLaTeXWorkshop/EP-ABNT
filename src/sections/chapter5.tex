@@ -3,30 +3,18 @@
     De uma base amostral contendo 303 pessoas, foram selecionadas todas com idade
     igual ou superior a 53 anos, totalizando 183 pessoas. Desta forma, foi realizado 
     o intervalo de confiança por proporção.
-    
-    \begin{flalign}
-        IC(1-\alpha)\% &= \bar{x} \pm \tau_\frac{\alpha}{2} ; * n-1 \frac{S}{\sqrt{n}} \\\nonumber
-        IC(95)\% &= 54.37 \pm 2.2622 * \frac{6.36}{\sqrt{10}} \\\nonumber
-        IC(95)\% &= 54.37 \pm 4.55 \\\nonumber
-        IC(95)\% &= [446.4 ; 455.50] && \nonumber
-    \end{flalign}
 
+    \begin{flalign}
+      IC(1-\alpha)\% &= \hat{P} \pm Z_\frac{\alpha}{2} * \sqrt{\frac{\hat{P}*(1-\hat{P})}{n}} \\\nonumber
+      IC(95)\% &= 0.604 \pm 1.96 * \sqrt{\frac{0.604*(0.396)}{303}} \\\nonumber
+      IC(95)\% &= 0.604 \pm 0.055 \\\nonumber
+      IC(95)\% &= [0.549 ; 0.659] &&\nonumber 
+    \end{flalign}   
 
     \begin{flalign}
       IC(1-\alpha)\% &= \bar{x} \pm Z*\frac{\alpha}{2} * \frac{\sigma}{\sqrt{N}} \\\nonumber
-      IC(95)\% &= 54.37 \pm 1.960 * \frac{9.08}{\sqrt{303}} \\\nonumber
-      IC(95)\% &= 54.37 \pm 1.02 \\\nonumber
-      IC(95)\% &= [53.35 ; 55.39] &&\nonumber
+      IC(95)\% &= 60.45 \pm 1.96 * \frac{5.1}{\sqrt{183}} \\\nonumber
+      IC(95)\% &= 60.45 \pm 0.74 \\\nonumber
+      IC(95)\% &= [59.1 ; 61.19] &&\nonumber
     \end{flalign}
-
-
-    \begin{flalign}
-     IC(1-\alpha)\% &= \hat{P} \pm Z_\frac{\alpha}{2} * \sqrt{\frac{\hat{P}*(1-\hat{P})}{n}} \\\nonumber
-     IC(95)\% &= 0.604 \pm 1.96 * \sqrt{\frac{0.604*(0.396)}{303}} \\\nonumber
-     IC(95)\% &= 0.604 \pm 0.055 \\\nonumber
-     IC(95)\% &= [0.549 ; 0.659] &&\nonumber 
-    \end{flalign}   
-
-
-
 
