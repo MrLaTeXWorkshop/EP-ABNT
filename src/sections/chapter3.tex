@@ -1,10 +1,21 @@
-\chapter{Tabelas/Gráficos}
+\chapter{Box Plot e Histograma}
 
     \setcounter{section}{0}
 
+    Com as categorias das variáveis colocadas, é possível inserir agora os dados coletados em gráficos, para 
+    analisar tais dados em conjunto. O primeiro gráfico utilizado é o chamado diagrama de caixa, também conhecido
+    como Box Plot. o Box Plot é nada mais do que uma ferramenta gráfica utilizada na estátistica para visualizar 
+    a variação númerica(vista pelo eixo X) dos quartis.
+
+    Enquanto isso, o quartil refere-se a qualquer um de três valores que divide o grupo ordenado de dados em quatro partes 
+    iguais. Através dele, é possível de forma visual avaliar a dispersão de um conjunto de dados, assim como também a presença 
+    de outliers(observação que diferencia um tanto das demais).
+
+    Abaixo pode ser encontrado o Box Plot das idades do conjunto amostral.
+
     \begin{figure}[H]
       \centering
-      \caption{Box Plot}
+      \caption{Box Plot feito com as idades}
       \begin{tikzpicture}
           \begin{axis}
             [xbar interval,
@@ -29,11 +40,15 @@
 
     O boxplot apresentou resultados interessantes, todas as variáveis presentes na 
     amostra de idades não ultrapassam dos outliers estabelecidos. Além disso se 
-    apresenta os valores 47, 55 e 61 para os quartis respectivamente.        
+    apresenta os valores 47, 55 e 61 para os quartis respectivamente.  
+    
+    Por outro lado, o histograma serve para analisar a distruibição de frequências.
+
+    Abaixo encontra-se um histograma feito com as idades do conjunto amostral analisado.
 
     \begin{figure}[H]
         \centering
-        \caption{Histograma}  
+        \caption{Histograma das idades}  
         \begin{tikzpicture}
             \begin{axis}[
                 xlabel={idade},
@@ -52,3 +67,6 @@
     Com o histograma, podemos observar uma ocorrência maior de casos em pessoas com 
     faixa etária entre 50 à 65 anos. A presença de casos para pessoas abaixo de 30 
     anos e acima dos 80 anos é quase nula.
+
+    \nocite{sobreboxplot}
+    \nocite{sobrehistograma}

@@ -4,6 +4,16 @@
     em proximidade de um valor central. Em outras palavras, a partir destas medidas é possível 
     descobrir um número que ocupa a posição central em um conjunto de valores.
 
+    Eis aqui as medidas de tendência central mais utilizadas e que também foram utilizadas nesse 
+    estudo:
+
+    \begin{enumerate}[label={\alph*)}]
+      \addtolength{\itemindent}{1.25cm}
+      \item Média: Também chamado de média aritmética:, é a soma de todos os elementos de um conjunto;
+      \item Mediana: Valor em um conjunto de dados que divide o grupo ao meio;
+      \item Moda: Valor que ocorre com a maior frequência em um grupo de dados;
+    \end{enumerate}
+
     Abaixo pode ser encontrado uma tabela feita para parear os dados quantitativos do banco de dados, 
     e encontrar as medidas de tendência central. Ela também apresenta o desvio padrão, importante 
     parâmetro estátistico para encontrar o grau de variação de um conjunto de elementos.
@@ -13,7 +23,7 @@
       \centering
         \begin{tabular}{ |P{2.8cm} |P{2cm}|P{3cm}|P{3cm}|P{3cm}|  }
           \hline
-            &        Idade & Pressão Sanguínea em repousou(kPa) & Colesterol  (mg/dl) & Pico de frequência cardíaca(bpm)\\
+            & Idade & Pressão Sanguínea em repousou(kPa) & Colesterol  (mg/dl) & Pico de frequência cardíaca(bpm)\\
           \hline
           Média & 54.36 & 131.62 & 246.26 & 149.64 \\
           \hline
@@ -27,3 +37,24 @@
       \legend{Fonte: Produzido pelos próprios autores}
     \end{table}
 
+    Analisando os dados, o primeiro detalhe a ser observado é a idade, onde é percebível que em média
+    as pessoas apresentam idade quase avançada(perto dos 65 anos), além disso, o desvio padrão indica 
+    uma baixa dispersão(9\%), logo indicando que existe pouca variação entre as idades 
+    (dados homogêneos)
+
+    Sobre a pressão sanguínea em repouso, os números parecem estar normais, possuindo valores 
+    que são considerados saudáveis. Enquanto isso, desta vez o desvio padrão demonstra que neste caso 
+    os dados possuem uma dispersão media.
+
+    O nível total de colesterol já demonstra um quadro um pouco mais preocupante, todas as medidas 
+    de tendência central demonstra dados que estão muito altos em comparação com os dados de referência.
+    Desta vez, os dados se apresentam heterogêneos, devido a um número alto do desvio padrão.
+
+    Por fim, temos o pico da frequência cardiáca. Neste caso, temos uma situação interessante, pois 
+    a média e mediana se apresentam apenas um pouco acima do que a referência indica, porém o número 
+    mais frequente nestes dados(também conhecido como a moda), é de 162 bpm, o que é um número relativamente 
+    alto. Assim como a pressão sanguínea, o desvio padrão desses dados sugere uma dispersão média.
+
+    \nocite{sobremedidascentrais}
+    \nocite{colesterol}
+    \nocite{frequenciacardiaca}
