@@ -68,5 +68,23 @@
     faixa etária entre 50 à 65 anos. A presença de casos para pessoas abaixo de 30 
     anos e acima dos 80 anos é quase nula.
 
+    \begin{figure}[H]
+      \centering
+      \caption{Histograma do colesterol}  
+      \begin{tikzpicture}
+          \begin{axis}[
+              xlabel={Colesterol em mg/dl},
+              ylabel={n° de casos},
+              ymin=0, ymax=116,
+              xmin=116, xmax=442,
+              area style,
+              ]
+              \addplot+[ybar interval, mark=no] plot coordinates { (126, 12) (169, 73) (213, 106) (257, 69) (301, 35) (345, 3) (388, 4) (432, 0)};
+          \end{axis}
+      \end{tikzpicture}
+      \legend{Fonte: Produzido pelos próprios autores}
+    \end{figure}
+
+
     \nocite{sobreboxplot}
     \nocite{sobrehistograma}
