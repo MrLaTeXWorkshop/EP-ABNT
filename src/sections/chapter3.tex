@@ -4,6 +4,7 @@
 
     \begin{figure}[H]
       \centering
+      \caption{Box Plot}
       \begin{tikzpicture}
           \begin{axis}
             [xbar interval,
@@ -23,7 +24,7 @@
             ] coordinates {};
           \end{axis}
       \end{tikzpicture}
-      \caption{Box Plot}
+      \legend{Fonte: Produzido pelos próprios autores}
     \end{figure}
 
     O boxplot apresentou resultados interessantes, todas as variáveis presentes na 
@@ -32,6 +33,7 @@
 
     \begin{figure}[H]
         \centering
+        \caption{Histograma}  
         \begin{tikzpicture}
             \begin{axis}[
                 xlabel={idade},
@@ -44,7 +46,7 @@
                 \addplot+[ybar interval, mark=no] plot coordinates { (29, 1) (33, 11) (38, 33) (43, 38) (48, 37) (53, 60) (58, 63) (63, 43)  (67, 14)  (72, 3)  (77, 3)};
             \end{axis}
         \end{tikzpicture}
-        \caption{Histograma}    
+        \legend{Fonte: Produzido pelos próprios autores}
     \end{figure}
 
     Com o histograma, podemos observar uma ocorrência maior de casos em pessoas com 
