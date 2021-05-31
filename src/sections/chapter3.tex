@@ -10,18 +10,10 @@
     Enquanto isso, o quartil refere-se a qualquer um de três valores que divide o grupo ordenado de dados em quatro partes 
     iguais. Através dele, é possível de forma visual avaliar a dispersão de um conjunto de dados, assim como também a presença 
     de outliers(observação que diferencia um tanto das demais).
-
-    Abaixo pode ser encontrado o Box Plot das idades do conjunto amostral.
-
-    --->Colocar outro box plot
-
-    O boxplot apresentou resultados interessantes, todas as variáveis presentes na 
-    amostra de idades não ultrapassam dos outliers estabelecidos. Além disso se 
-    apresenta os valores 47, 55 e 61 para os quartis respectivamente.  
     
     Por outro lado, o histograma serve para analisar a distruibição de frequências.
 
-    Abaixo encontra-se um histograma feito com as idades do conjunto amostral analisado.
+    Abaixo encontra-se um histograma feito com as idades do conjunto amostral analisado:
 
     \begin{figure}[H]
         \centering
@@ -43,7 +35,9 @@
 
     Com o histograma, podemos observar uma ocorrência maior de casos em pessoas com 
     faixa etária entre 50 à 65 anos. A presença de casos para pessoas abaixo de 30 
-    anos e acima dos 80 anos é quase nula.
+    anos e acima dos 70 anos é quase nula.
+
+    Abaixo encontra-se os gráficos com base no colesterol do conjunto amostral analisado:
 
     \begin{figure}[H]
       \centering
@@ -87,6 +81,14 @@
       \legend{Fonte: Produzido pelos próprios autores}
     \end{figure}
 
+    No boxplot, é possível observar que os outliers inferior 
+    e superior são 115 e 371, e que cinco valores da amostra 
+    ultrapassam esses outliers. Analisando o histograma, a presença da maior parte dos 
+    casos se encontra concentrada no intervalo de 169 mg/dl 
+    a 301 mg/dl de colesterol.
+    
+    Abaixo encontra-se os gráficos feitos com as pressões sanguíneas em repouso do conjunto amostral analisado:
+
     \begin{figure}[H]
       \centering
       \caption{Box Plot do pressão sanguínea em repouso}
@@ -114,7 +116,7 @@
 
     \begin{figure}[H]
       \centering
-      \caption{Histograma do pressão sanguínea repouso }  
+      \caption{Histograma da pressão sanguínea repouso }  
       \begin{tikzpicture}
           \begin{axis}[
               xlabel={Pressão sanguínea repouso},
@@ -130,30 +132,12 @@
       \legend{Fonte: Produzido pelos próprios autores}
     \end{figure}
 
-    \begin{figure}[H]
-      \centering
-      \caption{Box Plot dos resultados eletrocardiográficos em repouso}
-      \begin{tikzpicture}
-          \begin{axis}
-              [xbar interval,
-              xmax=3.5,xmin=-2.5,
-              minor x tick num = 5,
-              yticklabels=\empty,
-              xlabel={Resultados eletrocardiográficos em repouso},
-              ]
-            \addplot+[ 
-            boxplot prepared={
-              median=1,
-              upper quartile=1,
-              lower quartile=0,
-              upper whisker=2.5,
-              lower whisker=-1.5
-            },
-            ] coordinates {};
-          \end{axis}
-      \end{tikzpicture}
-      \legend{Fonte: Produzido pelos próprios autores}
-    \end{figure}
+    No boxplot, é possível observar que os outliers inferior e superior são 90 e 170, e que treze valores da 
+    amostra ultrapassam esses outliers, mais especificamente o limite superior. Analisando o histograma, a 
+    presença da maior parte dos casos concentra no intervalo de 110 mm/Hg a 140 mm/Hg equivalente a pressão 
+    sanguínea em repouso.
+
+    Abaixo encontra-se um histograma feito com os picos de batimento cardiáco do conjunto amostral analisado:
 
     \begin{figure}[H]
       \centering
@@ -173,7 +157,13 @@
       \legend{Fonte: Produzido pelos próprios autores}
     \end{figure}
 
+    Analisando o histograma, é possível observar uma curva crescente do intervalo de 80 a 160 do pico de batimento 
+    cardíaco. Além disso, é possível observar um número maior de casos, onde o batimento cardiovascular teve seu pico 
+    em 150 a 160 bpm.
 
+    É importante ressaltar que todos os gráficos feitos estão relacionados com as variáveis quantitativas da amostra, 
+    já que é uma forma mais fácil de analisar as mesmas e pode nos oferecer mais informações a respeito do conjunto como 
+    um todo.
 
     \nocite{sobreboxplot}
     \nocite{sobrehistograma}
