@@ -13,30 +13,7 @@
 
     Abaixo pode ser encontrado o Box Plot das idades do conjunto amostral.
 
-    \begin{figure}[H]
-      \centering
-      \caption{Box Plot feito com as idades}
-      \begin{tikzpicture}
-          \begin{axis}
-            [xbar interval,
-            xmax=92,xmin=16,
-              minor x tick num = 5,
-              yticklabels=\empty,
-              xlabel={idade},
-              ]
-            \addplot+[ 
-            boxplot prepared={
-              median=55,
-              upper quartile=55,
-              lower quartile=47,
-              upper whisker=26,
-              lower whisker=82
-            },
-            ] coordinates {};
-          \end{axis}
-      \end{tikzpicture}
-      \legend{Fonte: Produzido pelos próprios autores}
-    \end{figure}
+    --->Colocar outro box plot
 
     O boxplot apresentou resultados interessantes, todas as variáveis presentes na 
     amostra de idades não ultrapassam dos outliers estabelecidos. Além disso se 
@@ -70,6 +47,31 @@
 
     \begin{figure}[H]
       \centering
+      \caption{Box Plot do colesterol}
+      \begin{tikzpicture}
+          \begin{axis}
+              [xbar interval,
+              xmax=381,xmin=105,
+              minor x tick num = 5,
+              yticklabels=\empty,
+              xlabel={colesterol},
+              ]
+            \addplot+[ 
+            boxplot prepared={
+              median=240,
+              upper quartile=275,
+              lower quartile=211,
+              upper whisker=371,
+              lower whisker=115
+            },
+            ] coordinates {};
+          \end{axis}
+      \end{tikzpicture}
+      \legend{Fonte: Produzido pelos próprios autores}
+    \end{figure}
+
+    \begin{figure}[H]
+      \centering
       \caption{Histograma do colesterol}  
       \begin{tikzpicture}
           \begin{axis}[
@@ -80,6 +82,31 @@
               area style,
               ]
               \addplot+[ybar interval, mark=no] plot coordinates { (126, 12) (169, 73) (213, 106) (257, 69) (301, 35) (345, 3) (388, 4) (432, 0)};
+          \end{axis}
+      \end{tikzpicture}
+      \legend{Fonte: Produzido pelos próprios autores}
+    \end{figure}
+
+    \begin{figure}[H]
+      \centering
+      \caption{Box Plot do pressão sanguínea em repouso}
+      \begin{tikzpicture}
+          \begin{axis}
+              [xbar interval,
+              xmax=180,xmin=80,
+              minor x tick num = 5,
+              yticklabels=\empty,
+              xlabel={Pressão sanguínea em repouso},
+              ]
+            \addplot+[ 
+            boxplot prepared={
+              median=130,
+              upper quartile=140,
+              lower quartile=120,
+              upper whisker=170,
+              lower whisker=90
+            },
+            ] coordinates {};
           \end{axis}
       \end{tikzpicture}
       \legend{Fonte: Produzido pelos próprios autores}
@@ -98,6 +125,31 @@
               area style,
               ]
               \addplot+[ybar interval, mark=no] plot coordinates { (94, 10) (104, 42) (115, 67) (126, 74) (136, 57) (147, 27) (157, 13) (168, 8) (178, 3) (189, 2) (200, 2)};
+          \end{axis}
+      \end{tikzpicture}
+      \legend{Fonte: Produzido pelos próprios autores}
+    \end{figure}
+
+    \begin{figure}[H]
+      \centering
+      \caption{Box Plot dos resultados eletrocardiográficos em repouso}
+      \begin{tikzpicture}
+          \begin{axis}
+              [xbar interval,
+              xmax=3.5,xmin=-2.5,
+              minor x tick num = 5,
+              yticklabels=\empty,
+              xlabel={Resultados eletrocardiográficos em repouso},
+              ]
+            \addplot+[ 
+            boxplot prepared={
+              median=1,
+              upper quartile=1,
+              lower quartile=0,
+              upper whisker=2.5,
+              lower whisker=-1.5
+            },
+            ] coordinates {};
           \end{axis}
       \end{tikzpicture}
       \legend{Fonte: Produzido pelos próprios autores}
