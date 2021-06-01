@@ -23,7 +23,7 @@
       \centering
         \begin{tabular}{ |P{2.8cm} |P{2cm}|P{3cm}|P{3cm}|P{3cm}|  }
           \hline
-            & Idade & Pressão Sanguínea em repousou(kPa) & Colesterol  (mg/dl) & Pico de frequência cardíaca(bpm)\\
+            & Idade & Pressão Sanguínea em repousou     (mm/Hg) & Colesterol  (mg/dl) & Pico de frequência cardíaca(bpm)\\
           \hline
           Média & 54.36 & 131.62 & 246.26 & 149.64 \\
           \hline
@@ -42,19 +42,52 @@
     uma baixa dispersão(9\%), logo indicando que existe pouca variação entre as idades 
     (dados homogêneos).
 
-    Sobre a pressão sanguínea em repouso, os números parecem estar normais, possuindo valores 
-    que são considerados saudáveis. Enquanto isso, desta vez o desvio padrão demonstra que neste caso 
-    os dados possuem uma dispersão media.
+    Sobre a pressão sanguínea em repouso, os números parecem estar normais. De acordo com dados da Unimed
+    \cite{hipertensao}, "A doença se dá quando a pressão arterial do paciente, maior de 18 anos, é superior
+    a 140 x 90 mmHg (milímetro por mercúrio) – ou 14 por 9.". Por mais que as tendências centrais estejam com  
+    valores ideais(120 x 80 mmHg), nenhum deles passam do número mencionado anteriormente. Enquanto isso, desta vez o desvio padrão demonstra 
+    que os dados possuem uma dispersão media.
 
     O nível total de colesterol já demonstra um quadro um pouco mais preocupante, todas as medidas 
-    de tendência central demonstra dados que estão muito altos em comparação com os dados de referência.
-    Desta vez, os dados se apresentam heterogêneos, devido a um número alto do desvio padrão.
+    de tendência central demonstra dados que estão muito altos em comparação com o valor desejável \cite{colesterol}.
+    "Desejável: abaixo de 190 mg/dl.". Desta vez, os dados se apresentam heterogêneos, devido a um número
+    alto do desvio padrão.
 
     Por fim, temos o pico da frequência cardiáca. Neste caso, temos uma situação interessante, pois 
-    a média e mediana se apresentam apenas um pouco acima do que a referência indica, porém o número 
-    mais frequente nestes dados(também conhecido como a moda), é de 162 bpm, o que é um número relativamente 
-    alto. Assim como o colesterol, o desvio padrão desses dados sugere uma dispersão alta.
+    a média e mediana se apresentam apenas um pouco acima do que a referência indica(verifique na tabela abaixo), pelo 
+    menos para a idade média dos dados analisados. Todavia o número mais frequente nestes dados(também conhecido como a moda),
+    é de 162 bpm, o que é um número relativamente alto. Assim como o colesterol, o desvio padrão desses dados sugere uma dispersão alta.
 
-    \nocite{sobremedidascentrais}
-    \nocite{colesterol}
+    \begin{table}[htb]
+      \caption{Idade e suas respectivas frequências cardíacas}
+      \centering
+        \begin{tabular}{ |c|c|  }
+          \hline
+          Idade & Frequência cardíaca (bpm) \\
+          \hline
+          20 & 100-170  \\
+          \hline
+          30 & 95-162 \\
+          \hline
+          35 & 93-157 \\
+          \hline
+          40 & 90-153  \\
+          \hline
+          45 & 88-149 \\
+          \hline
+          50 & 85-145  \\
+          \hline
+          55 & 83-140  \\
+          \hline
+          60 & 80-136  \\
+          \hline
+          65 & 78-132  \\
+          \hline
+          70 & 75-128  \\
+          \hline
+        \end{tabular}
+      \legend{Fonte: \url{https://veja.abril.com.br/saude/qual-e-a-frequencia-cardiaca-ideal-durante-o-exercicio/}}
+    \end{table}
+
     \nocite{frequenciacardiaca}
+    \nocite{sobremedidascentrais}
